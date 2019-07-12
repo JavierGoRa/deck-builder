@@ -1,0 +1,74 @@
+<!--
+  Generated template for the LoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>login</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+
+<ion-list>
+    <form>
+      <ion-item>
+        <ion-label floating>Email</ion-label>
+        <ion-input
+          [(ngModel)]="user.email"
+          name="email"
+          type="text"
+          autocapitalize="off"
+          required
+        >
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Contraseña</ion-label>
+        <ion-input
+          [(ngModel)]="user.password"
+          name="password"
+          type="password"
+          required
+        >
+        </ion-input>
+      </ion-item>
+      <div padding>
+        <button
+            ion-button 
+            (click)="login()"
+            type="submit"
+            color="primary"
+            block
+        >
+          Login
+        </button>
+
+        <button
+          ion-button 
+          (click)="signin()"
+          type="submit"
+          color="secondary"
+          block
+        >
+          Registrarse
+        </button>
+      </div>
+    </form>
+    <div style="margin:20px">
+      Perdona Javier pero "return this.afAuth.auth.currentUser.uid" del metodo getUser() sigue sin funcionar. <br>
+      Y no devuelve el id del usuario logeado. <br>
+      Y le tengo puesto que devuelva el id en bruto <br>
+      En definitiva que da igual la cuenta que uses, vas a entrar en la misma base de datos siempre. <br>
+      Todo lo demas funciona. <br>
+      Gracias y que te mejores.
+    </div>
+    
+
+  </ion-list>
+</ion-content>

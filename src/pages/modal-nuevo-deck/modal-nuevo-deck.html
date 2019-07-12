@@ -1,0 +1,37 @@
+<!--
+  Generated template for the ModalNuevoDeckPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Nuevo deck</ion-title>
+   <ion-buttons start>
+      <button ion-button (click)="cerrarModal()">
+        <ion-icon name="md-close"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <form>
+    <ion-list>
+        <ion-item #item *ngFor="let carta of cartasTotal">
+          <ion-thumbnail item-left>
+            <img class="carta" [src]="carta.image">
+          </ion-thumbnail>
+          <ion-checkbox [(ngModel)]="carta.isChecked" name="check" ></ion-checkbox>
+          <h2>{{ carta.name }}</h2>
+        </ion-item>
+        <br>
+        <button type="submit" (click)="guardarDeck()" ion-button>Crear</button>
+    </ion-list>
+  </form>
+
+</ion-content>

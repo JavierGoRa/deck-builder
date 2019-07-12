@@ -1,0 +1,57 @@
+<!--
+  Generated template for the ModalDetalleDeckPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+      <ion-title>Este es tu deck</ion-title>
+      <ion-buttons start>
+       <button ion-button (click)="cerrarModal()">
+         <ion-icon name="md-close"></ion-icon>
+       </button>
+     </ion-buttons>  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item #item>
+      <ion-item style="clear:both">
+        <ion-thumbnail style="float:left">
+          <img [src]="decks[0].image">       
+        </ion-thumbnail>
+        <ion-thumbnail style="float:left; margin-left: 10px;margin-top: 10px">
+          Nombre: {{decks[0].name}} <br> Maná: {{decks[0].mana}} <br> Tipo: {{decks[0].type}}  
+        </ion-thumbnail>
+      </ion-item>
+      <ion-item style="clear:both">
+        <ion-thumbnail style="float:left">
+          <img [src]="decks[1].image">       
+        </ion-thumbnail>
+        <ion-thumbnail style="float:left; margin-left: 10px;margin-top: 10px">
+          Nombre: {{decks[1].name}} <br> Maná: {{decks[1].mana}} <br> Tipo: {{decks[1].type}}  
+        </ion-thumbnail>
+      </ion-item>
+      <ion-item style="clear:both">
+        <ion-thumbnail style="float:left">
+          <img [src]="decks[2].image">       
+        </ion-thumbnail>
+        <ion-thumbnail style="float:left; margin-left: 10px;margin-top: 10px">
+          Nombre: {{decks[2].name}} <br> Maná: {{decks[2].mana}} <br> Tipo: {{decks[2].type}}  
+        </ion-thumbnail>
+      </ion-item>
+      <ion-item style="clear:both">
+        <ion-thumbnail style="float:left">
+          <img [src]="decks[3].image">       
+        </ion-thumbnail>
+        <ion-thumbnail style="float:left; margin-left: 10px;margin-top: 10px">
+          Nombre: {{decks[3].name}} <br> Maná: {{decks[3].mana}} <br> Tipo: {{decks[3].type}}  
+        </ion-thumbnail>
+      </ion-item>
+    </ion-item>
+  </ion-list>
+</ion-content>
